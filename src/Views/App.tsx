@@ -50,7 +50,7 @@ let App = (): ReactElement => {
     }
 
     return (
-        <div className="App" >
+        <div style={{height: '100%', display: "grid", placeContent: "center"}} >
             {error && <div>There was an error :( Please try again</div>}
             {pending ? <div>...loading</div> : (currentCrosswords && <Board currentCrosswords={currentCrosswords}/>)}
             <button style={{margin: "20px"}} onClick={getRandomDates}>Get a random crosswords puzzle!</button>

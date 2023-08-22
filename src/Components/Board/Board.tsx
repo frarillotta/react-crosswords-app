@@ -232,11 +232,11 @@ let Board = ({currentCrosswords}): ReactElement => {
                     })
                     }
                 </div>
-                <div>
+                <div style={{display: 'flex', flexDirection: "column"}}>
                     <button style={{height: "35px", padding: "10px", margin: "10px"}} onClick={() => {
                         setAcross(!across)
                     }}>Change to {across ? "down" : "across" }</button>
-                    <div style={{padding: "10px", overflow: "scroll", height: "700px"}}>
+                    <div style={{padding: "10px", overflow: "scroll",height: '100%', maxHeight: '800px'}}>
                         {across ? currentCrosswords.clues.across.map((clue) => {
                             return <div style={{marginTop: "10px"}} key={clue} onClick={()=>{handleClueClick(clue)}}>{clue}</div>
                         }) : currentCrosswords.clues.down.map((clue) => {
